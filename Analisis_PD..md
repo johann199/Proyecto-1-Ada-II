@@ -10,15 +10,7 @@ Multiplicación de matrices
 
 ```M[i,j] = M[i,k]* M[k+1,j] para i <= k < j```
 
-$$ 
-M[i,j] =
-\begin{cases}
-0 & \text{si } i = j \\
-\min\limits_{i \leq k < j} \left\{M[i,k] + 
-M[k-1, j] + p_{i-1} \cdot p_k \cdot p_j \right\}&
-\text{si } i < j
-\end{cases}
-$$
+$$ M[i,j] =\begin{cases}0 & \text{si } i = j \\\min\limits_{i \leq k < j} \left\{M[i,k] + M[k-1, j] + p_{i-1} \cdot p_k \cdot p_j \right\}&\text{si } i < j\end{cases}$$
 
 Resolver un problema.
 
@@ -30,8 +22,9 @@ M[1,4]
 | 3   | 0      | 0      | M[3,3] | M[3,4] |
 | 4   | 0      | 0      | 0      | M[4,4] |
 
-casos base: 
-$$M[1,1], M[2,2] M[3,3] y M[4,4]$$
+casos base:
+ 
+$$M[1,1],M[2,2],M[3,3] y M[4,4]$$
 
 para calcular M[1,2] necesito:
 
